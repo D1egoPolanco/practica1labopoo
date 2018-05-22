@@ -5,21 +5,10 @@
  */
 package practica1;
 
-import gui.Gui;
-
 /**
  *
  * @author LN710Q
  */
-public class Practica1 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        int suma,resta,div,multi;
-       new Gui().setVisible(true);
-       
-    }
+public abstract class suma implements calc {
     
 }

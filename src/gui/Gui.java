@@ -18,19 +18,38 @@ import javax.swing.JTextField;
  */
 public class Gui extends JFrame{
     public Gui(){
-        super("Titulo");
+        super("Calculadora");
         initialcomponents();
         botton.addActionListener(new ActionListener() {
             @Override
             
             public void actionPerformed(ActionEvent e) {
-              System.out.println("hola mundo");
+              System.out.println("Resultado");
               caja2.setText(caja1.getText());
             }
         });
+        boton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               System.out.println("resta");
+            }
+        });
+        boton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Multi");
+                            }
+        });
+        boton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Division");
+                            }
+        });
+        
     }
     private JTextField caja1,caja2;
-    private JButton botton;
+    private JButton botton, boton2,boton3,boton4;
             
     public void initialcomponents (){
         
@@ -42,16 +61,26 @@ public class Gui extends JFrame{
         caja2= new JTextField();
         caja2.setBounds(10,150,150,30);
         
-         botton=new JButton("click");
+         botton=new JButton("Sumar");
         botton.setBounds(10,200,150,30);
+        boton2=new JButton("resta");
+        boton2.setBounds(10,250,150,30);
+        boton3=new JButton("resta");
+        boton3.setBounds(10,300,150,30);
+        boton4=new JButton("resta");
+        boton4.setBounds(10,350,150,30);
        Container container=getContentPane();
         container.add(caja1);
         container.add(caja2);
         container.add (botton);
+        container.add (boton2);
+        container.add (boton3);
+         container.add (boton4);
         
-        //Bbotton=new 
+        
+      
        
-        setSize(300,300);
+        setSize(300,500);
         
     }
 
